@@ -1,6 +1,5 @@
 ---
 theme: seriph
-background: https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&q=80
 class: text-center
 highlighter: shiki
 lineNumbers: false
@@ -11,16 +10,18 @@ title: SUBA - Evolución Arquitectónica
 mdc: true
 ---
 
-# <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 font-extrabold">Proyecto SUBA</span>
+<div class="absolute inset-0 bg-white z-[-1]"></div>
+
+# <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 font-extrabold">Proyecto SUBA</span>
 <div class="flex justify-center my-6 relative">
-  <div class="absolute inset-0 bg-blue-500 blur-3xl opacity-20 rounded-full"></div>
+  <div class="absolute inset-0 bg-blue-200 blur-3xl opacity-30 rounded-full"></div>
   <img src="/logotipo.png" alt="Logotipo SUBA" class="h-40 object-contain relative hover:scale-105 transition-transform duration-500" />
 </div>
 
-<h3 class="opacity-90 tracking-widest uppercase text-sm mb-2">Sistema Automatizado de Boletería Urbana</h3>
+<h3 class="text-gray-500 opacity-90 tracking-widest uppercase text-sm mb-2">Sistema Automatizado de Boletería Urbana</h3>
 
 <div class="mt-4 flex justify-center gap-2 items-center">
-  <span class="px-3 py-1 bg-blue-500 bg-opacity-20 border border-blue-400 border-opacity-30 rounded-full text-xs font-mono text-blue-300">
+  <span class="px-3 py-1 bg-blue-100 border border-blue-200 rounded-full text-xs font-mono text-blue-600 font-bold">
     v2.0.1 - Refactorización
   </span>
 </div>
@@ -45,36 +46,46 @@ mdc: true
 </style>
 
 ---
-layout: intro
+layout: default
 ---
 
-# ¿Qué es SUBA? <span class="text-blue-400">🚌</span>
+<div class="absolute inset-0 bg-white z-[-1]"></div>
 
-<p class="opacity-80 text-lg">Una plataforma integral para modernizar el transporte en Ciudad Bolívar.</p>
+# Problemáticas del Transporte Público 🚩
+<p class="text-gray-500 -mt-2 text-sm font-medium">Análisis de la situación actual y desafíos críticos</p>
 
-<div class="grid grid-cols-2 gap-10 mt-12">
-  <div v-click class="group p-6 rounded-2xl bg-white bg-opacity-5 border border-white border-opacity-10 backdrop-blur-md hover:bg-opacity-10 transition-all duration-500 hover:-translate-y-2">
-    <div class="w-12 h-12 bg-blue-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-      <carbon:user-avatar class="text-2xl text-blue-400" />
-    </div>
-    <h3 class="text-xl font-bold mb-3 text-blue-300">Módulo Pasajero</h3>
-    <ul class="text-sm space-y-3 opacity-70">
-      <li class="flex items-center gap-2"><carbon:location-filled class="text-blue-500" /> Rastreo en tiempo real</li>
-      <li class="flex items-center gap-2"><carbon:qr-code class="text-blue-500" /> Pagos digitales QR/NFC</li>
-      <li class="flex items-center gap-2"><carbon:map class="text-blue-500" /> Rutas dinámicas e inteligentes</li>
+<div class="grid grid-cols-2 gap-8 mt-10">
+  <div v-click class="p-6 rounded-2xl bg-red-50 border border-red-100 shadow-sm text-left">
+    <h3 class="text-red-600 font-bold mb-4 flex items-center gap-2 text-lg">
+      <carbon:warning-alt-filled /> Crisis de Servicio
+    </h3>
+    <ul class="text-sm space-y-4 text-gray-700">
+      <li class="flex items-start gap-3">
+        <carbon:time class="text-red-500 mt-1 shrink-0" />
+        <span><b>Incertidumbre:</b> Desconocimiento total de tiempos de llegada y disponibilidad de unidades.</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <carbon:currency class="text-red-500 mt-1 shrink-0" />
+        <span><b>Fuga de Capital:</b> Sistemas de recaudación arcaicos sin trazabilidad financiera.</span>
+      </li>
     </ul>
   </div>
 
-  <div v-click class="group p-6 rounded-2xl bg-white bg-opacity-5 border border-white border-opacity-10 backdrop-blur-md hover:bg-opacity-10 transition-all duration-500 hover:-translate-y-2">
-    <div class="w-12 h-12 bg-orange-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-      <carbon:user-identification class="text-2xl text-orange-400" />
+  <div v-click class="p-6 rounded-2xl bg-orange-50 border border-orange-100 shadow-sm text-left">
+    <h3 class="text-orange-600 font-bold mb-4 flex items-center gap-2 text-lg">
+      <carbon:face-dissatisfied-filled /> Impacto Social y Gestión
+    </h3>
+    <p class="text-sm text-gray-700 leading-relaxed mb-4">
+      <b>Obstáculos en el pago:</b> Proceso engorroso para obtener efectivo, billetes deteriorados y tarifas injustas/arbitrarias.
+    </p>
+    <div class="pt-4 border-t border-orange-200">
+      <h4 class="font-bold text-xs text-orange-700 uppercase mb-2 flex items-center gap-1">
+        <carbon:settings-adjust /> Ineficiencia Administrativa
+      </h4>
+      <p class="text-[11px] text-gray-600">
+        Falta de coordinación entre entes, reformas de roles sin sustento técnico y ausencia de registros digitales (conductores, buses y rutas).
+      </p>
     </div>
-    <h3 class="text-xl font-bold mb-3 text-orange-300">Módulo Conductor</h3>
-    <ul class="text-sm space-y-3 opacity-70">
-      <li class="flex items-center gap-2"><carbon:currency-dollar class="text-orange-500" /> Recaudación automatizada</li>
-      <li class="flex items-center gap-2"><carbon:radar class="text-orange-500" /> Telemetría constante</li>
-      <li class="flex items-center gap-2"><carbon:analytics class="text-orange-500" /> Gestión de rendimiento</li>
-    </ul>
   </div>
 </div>
 
@@ -82,34 +93,89 @@ layout: intro
 layout: default
 ---
 
-# El Desafío: Realidad del Transporte 🚩
-<p class="opacity-50 -mt-2 text-sm">Contexto geográfico y operativo del Estado Bolívar</p>
+<div class="absolute inset-0 bg-white z-[-1]"></div>
+
+# Antecedentes: Macro a Micro 🌍
+<p class="text-gray-500 -mt-2 text-sm font-medium">Evolución y respuestas globales ante la crisis del transporte</p>
+
+<div class="grid grid-cols-3 gap-4 mt-8">
+  <div v-click class="p-4 rounded-xl bg-blue-50 border border-blue-100 shadow-sm">
+    <h3 class="text-blue-700 font-bold mb-2 flex items-center gap-2 text-sm">
+      <carbon:earth-filled /> Internacional
+    </h3>
+    <p class="text-[10px] text-gray-700 leading-relaxed">
+      La digitalización en <b>Taiwán y Nueva York</b> ha eliminado cuellos de botella financieros. El transporte automatizado es el eje motor del desarrollo económico.
+    </p>
+  </div>
+
+  <div v-click class="p-4 rounded-xl bg-emerald-50 border border-emerald-100 shadow-sm">
+    <h3 class="text-emerald-700 font-bold mb-2 flex items-center gap-2 text-sm">
+      <carbon:map-boundary /> Latinoamérica
+    </h3>
+    <p class="text-[10px] text-gray-700 leading-relaxed">
+      Respuesta a la fuga de capital e ineficiencia. Urgencia de formalizar el sector para obtener <b>control estadístico total</b> y eliminar el sesgo en la planificación.
+    </p>
+  </div>
+
+  <div v-click class="p-4 rounded-xl bg-yellow-50 border border-yellow-100 shadow-sm">
+    <h3 class="text-yellow-700 font-bold mb-2 flex items-center gap-2 text-sm">
+      <carbon:location-filled /> Venezuela
+    </h3>
+    <p class="text-[10px] text-gray-700 leading-relaxed">
+      Experiencias como <b>VeTICKET y BTR</b> enfrentan falta de financiamiento. SUBA propone tecnología <i>Open Source</i> para mitigar la incertidumbre y profesionalizar la gestión.
+    </p>
+  </div>
+</div>
+
+<div v-click class="mt-8 grid grid-cols-3 gap-4">
+  <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg border border-gray-200">
+    <span class="text-lg font-black text-gray-300">01</span>
+    <p class="text-[10px] font-bold text-gray-600">Reducción de brecha financiera</p>
+  </div>
+  <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg border border-gray-200">
+    <span class="text-lg font-black text-gray-300">02</span>
+    <p class="text-[10px] font-bold text-gray-600">Control estadístico real</p>
+  </div>
+  <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg border border-gray-200">
+    <span class="text-lg font-black text-gray-300">03</span>
+    <p class="text-[10px] font-bold text-gray-600">Tecnología sostenible</p>
+  </div>
+</div>
+
+---
+layout: default
+---
+
+<div class="absolute inset-0 bg-white z-[-1]"></div>
+
+# Planteamiento del Problema 🔍
+<p class="text-gray-500 -mt-2 text-sm font-medium">Contexto geográfico y operativo del Estado Bolívar</p>
 
 <div class="grid grid-cols-2 gap-8 mt-10">
-  <div v-click>
-    <h3 class="text-red-400 font-bold mb-4 flex items-center gap-2 text-lg">
-      <carbon:warning-alt-filled /> Problemática Central
+  <div v-click class="p-6 rounded-2xl bg-blue-50 border border-blue-100 shadow-sm text-left">
+    <h3 class="text-blue-600 font-bold mb-4 flex items-center gap-2 text-lg">
+      <carbon:location-hazard /> Problemática Central
     </h3>
-    <p class="text-sm opacity-80 leading-relaxed">
+    <p class="text-sm text-gray-700 leading-relaxed">
       El transporte público en Bolívar opera bajo un <b>esquema arcaico</b> que ignora la gestión de tiempos, dejando al ciudadano en una incertidumbre total sin estimaciones de espera ni trazabilidad.
     </p>
-    <div class="mt-6 p-4 bg-red-500 bg-opacity-10 border-l-4 border-red-500 rounded-r-lg">
-      <p class="text-xs italic">"¿En qué medida SUBA permitirá optimizar el recaudo y la gestión de tiempos en este contexto?"</p>
+    <div class="mt-6 p-4 bg-blue-600 bg-opacity-10 border-l-4 border-blue-600 rounded-r-lg">
+      <p class="text-xs italic text-blue-900">"¿En qué medida SUBA permitirá optimizar el recaudo y la gestión de tiempos en este contexto?"</p>
     </div>
   </div>
 
   <div class="space-y-4">
-    <div v-click class="flex items-start gap-3">
-      <carbon:close-outline class="text-red-500 mt-1 shrink-0" />
-      <p class="text-xs opacity-70"><b>Fuga de Capitales:</b> Sistemas de pago basados exclusivamente en efectivo.</p>
+    <div v-click class="flex items-start gap-3 p-3 bg-gray-50 rounded-xl border border-gray-100 shadow-sm">
+      <carbon:error class="text-red-500 mt-1 shrink-0" />
+      <p class="text-xs text-gray-700"><b>Ceguera Institucional:</b> El IMTTV carece de datos estadísticos para planificación vial y fiscalización real.</p>
     </div>
-    <div v-click class="flex items-start gap-3">
-      <carbon:close-outline class="text-red-500 mt-1 shrink-0" />
-      <p class="text-xs opacity-70"><b>Ceguera Institucional:</b> El IMTTV carece de datos estadísticos para planificación vial.</p>
+    <div v-click class="flex items-start gap-3 p-3 bg-gray-50 rounded-xl border border-gray-100 shadow-sm">
+      <carbon:flash-off class="text-red-500 mt-1 shrink-0" />
+      <p class="text-xs text-gray-700"><b>Brecha Digital:</b> Fracaso de iniciativas previas por falta de adaptabilidad a las limitaciones de conectividad local.</p>
     </div>
-    <div v-click class="flex items-start gap-3">
-      <carbon:close-outline class="text-red-500 mt-1 shrink-0" />
-      <p class="text-xs opacity-70"><b>Brecha Digital:</b> Fracaso de iniciativas previas por falta de adaptabilidad local.</p>
+    <div v-click class="flex items-start gap-3 p-3 bg-gray-50 rounded-xl border border-gray-100 shadow-sm">
+      <carbon:group-resource class="text-red-500 mt-1 shrink-0" />
+      <p class="text-xs text-gray-700"><b>Desarticulación:</b> Ausencia de un canal de comunicación efectivo entre conductores, usuarios y entes reguladores.</p>
     </div>
   </div>
 </div>
@@ -152,27 +218,61 @@ layout: default
     <div class="shrink-0 w-14 h-14 rounded-full border-2 border-blue-500 flex items-center justify-center font-bold text-blue-400 text-xl">GO</div>
     <div>
       <h4 class="font-bold text-blue-300">Objetivo General</h4>
-      <p class="text-sm opacity-70">Desarrollar un sistema basado en aplicación móvil para optimizar el control de recaudo y la gestión de tiempos en el transporte público del Estado Bolívar.</p>
+      <p class="text-sm opacity-70">Desarrollar una solución para las deficiencias actuales del sistema de transporte del municipio por medio de un prototipo.</p>
     </div>
   </div>
 
   <div class="grid grid-cols-2 gap-x-12 gap-y-6">
     <div v-click class="flex gap-3">
       <carbon:checkmark-outline class="text-blue-500 shrink-0" />
-      <p class="text-[11px] opacity-60"><b>Diagnosticar</b> fallas actuales y la ausencia de indicadores de tiempo.</p>
+      <p class="text-[11px] opacity-60"><b>Diagnosticar</b> la situación actual del transporte público.</p>
     </div>
     <div v-click class="flex gap-3">
       <carbon:checkmark-outline class="text-blue-500 shrink-0" />
-      <p class="text-[11px] opacity-60"><b>Determinar</b> requerimientos técnicos considerando limitaciones de conectividad regional.</p>
+      <p class="text-[11px] opacity-60"><b>Determinar</b> requerimientos técnicos funcionales, no funcionales y flujo del sistema.</p>
     </div>
     <div v-click class="flex gap-3">
       <carbon:checkmark-outline class="text-blue-500 shrink-0" />
-      <p class="text-[11px] opacity-60"><b>Diseñar</b> arquitectura de datos e interfaz UI/UX centrada en la simplicidad.</p>
+      <p class="text-[11px] opacity-60"><b>Definir</b> la arquitectura de software y patrones de diseño aplicados.</p>
     </div>
     <div v-click class="flex gap-3">
       <carbon:checkmark-outline class="text-blue-500 shrink-0" />
-      <p class="text-[11px] opacity-60"><b>Validar</b> el sistema mediante pruebas de campo y simulaciones reales.</p>
+      <p class="text-[11px] opacity-60"><b>Integrar</b> datos de acuerdo al IMTTV/INTTV y dar respuesta a su ineficiencia.</p>
     </div>
+  </div>
+</div>
+
+---
+layout: intro
+---
+
+# ¿Qué es SUBA? <span class="text-blue-400">🚌</span>
+
+<p class="opacity-80 text-lg">Una plataforma integral para modernizar el transporte en Ciudad Bolívar.</p>
+
+<div class="grid grid-cols-2 gap-10 mt-12">
+  <div v-click class="group p-6 rounded-2xl bg-white bg-opacity-5 border border-white border-opacity-10 backdrop-blur-md hover:bg-opacity-10 transition-all duration-500 hover:-translate-y-2">
+    <div class="w-12 h-12 bg-blue-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+      <carbon:user-avatar class="text-2xl text-blue-400" />
+    </div>
+    <h3 class="text-xl font-bold mb-3 text-blue-300">Módulo Pasajero</h3>
+    <ul class="text-sm space-y-3 opacity-70">
+      <li class="flex items-center gap-2"><carbon:location-filled class="text-blue-500" /> Rastreo en tiempo real</li>
+      <li class="flex items-center gap-2"><carbon:qr-code class="text-blue-500" /> Pagos digitales QR/NFC</li>
+      <li class="flex items-center gap-2"><carbon:map class="text-blue-500" /> Rutas dinámicas e inteligentes</li>
+    </ul>
+  </div>
+
+  <div v-click class="group p-6 rounded-2xl bg-white bg-opacity-5 border border-white border-opacity-10 backdrop-blur-md hover:bg-opacity-10 transition-all duration-500 hover:-translate-y-2">
+    <div class="w-12 h-12 bg-orange-500 bg-opacity-20 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+      <carbon:user-identification class="text-2xl text-orange-400" />
+    </div>
+    <h3 class="text-xl font-bold mb-3 text-orange-300">Módulo Conductor</h3>
+    <ul class="text-sm space-y-3 opacity-70">
+      <li class="flex items-center gap-2"><carbon:currency-dollar class="text-orange-500" /> Recaudación automatizada</li>
+      <li class="flex items-center gap-2"><carbon:radar class="text-orange-500" /> Telemetría constante</li>
+      <li class="flex items-center gap-2"><carbon:analytics class="text-orange-400" /> Gestión de rendimiento</li>
+    </ul>
   </div>
 </div>
 
@@ -219,6 +319,65 @@ class: text-center
     </div>
     <span class="text-xs font-bold">MQTT Real-time</span>
   </div>
+</div>
+
+---
+layout: default
+---
+
+<div class="absolute inset-0 bg-white z-[-1]"></div>
+
+# Interfaz de Usuario: SUBA App 📱
+<p class="text-gray-500 -mt-2 text-sm font-medium">Experiencia móvil moderna, intuitiva y funcional</p>
+
+<div class="grid grid-cols-6 gap-3 mt-6">
+  <div v-click class="space-y-2">
+    <div class="rounded-xl overflow-hidden shadow-md border border-gray-200">
+      <img src="/imagenes/1.png" class="w-full object-cover" />
+    </div>
+    <p class="text-[10px] text-center font-bold text-blue-600 uppercase">Login</p>
+  </div>
+  
+  <div v-click class="space-y-2">
+    <div class="rounded-xl overflow-hidden shadow-md border border-gray-200">
+      <img src="/imagenes/2.png" class="w-full object-cover" />
+    </div>
+    <p class="text-[10px] text-center font-bold text-blue-600 uppercase">Home</p>
+  </div>
+
+  <div v-click class="space-y-2">
+    <div class="rounded-xl overflow-hidden shadow-md border border-gray-200">
+      <img src="/imagenes/3.png" class="w-full object-cover" />
+    </div>
+    <p class="text-[10px] text-center font-bold text-blue-600 uppercase">Billetera</p>
+  </div>
+
+  <div v-click class="space-y-2">
+    <div class="rounded-xl overflow-hidden shadow-md border border-gray-200">
+      <img src="/imagenes/4.png" class="w-full object-cover" />
+    </div>
+    <p class="text-[10px] text-center font-bold text-blue-600 uppercase">Perfil</p>
+  </div>
+
+  <div v-click class="space-y-2">
+    <div class="rounded-xl overflow-hidden shadow-md border border-gray-200">
+      <img src="/imagenes/5.png" class="w-full object-cover" />
+    </div>
+    <p class="text-[10px] text-center font-bold text-blue-600 uppercase">Subsidios</p>
+  </div>
+
+  <div v-click class="space-y-2">
+    <div class="rounded-xl overflow-hidden shadow-md border border-gray-200">
+      <img src="/imagenes/6.png" class="w-full object-cover" />
+    </div>
+    <p class="text-[10px] text-center font-bold text-blue-600 uppercase">Mapa</p>
+  </div>
+</div>
+
+<div v-click class="mt-8 p-4 bg-blue-50 border border-blue-100 rounded-2xl">
+  <p class="text-[11px] text-gray-600 text-center italic leading-tight">
+    "Diseño centrado en la usabilidad del ciudadano bolivarense, priorizando la claridad visual y la eficiencia en la gestión de tiempos y pagos."
+  </p>
 </div>
 
 ---
